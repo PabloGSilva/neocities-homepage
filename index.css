@@ -17,6 +17,16 @@ body {
     background: url(https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png);
     animation: waterfall 10s linear infinite;
     will-change: background-position;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+i {
+    font-style: italic;
 }
 
 @keyframes waterfall {
@@ -35,10 +45,15 @@ h1 {
     text-shadow: 3px 3px 4px gray;
 }
 
+h2 {
+    text-shadow: 2px 2px 4px gray;
+    font-size: 1.6rem;
+}
+
 p {
     font-size: 20px;
     margin-bottom: 0.2em;
-    text-shadow: 3px 3px 4px gray;
+    text-shadow: 2px 2px 4px gray;
 }
 
 main {
@@ -70,10 +85,11 @@ main {
 
 .shuffle-button,
 .patreon-button {
+    font-size: 20px;
     border: 2px solid black;
-    font-size: 1.5em;
     color: #000;
     box-shadow: 2px 2px 5px black;
+    font-weight: bold;
 }
 
 .shuffle-button {
@@ -82,4 +98,86 @@ main {
 
 .patreon-button {
     background-color: lightgreen;
+}
+
+#album-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 90vw;
+    height: 100vh;
+    background: #111;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.6);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    padding: 1.2rem 1.2rem 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+#album-panel.open {
+    transform: translateX(0);
+}
+
+#panel-close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #fff;
+}
+
+#backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+#backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.panel-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#panel-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+#panel-title {
+    margin: 0;
+}
+
+#panel-genres {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+#panel-link {
+    display: inline-block;
+    background: lightgreen;
+    color: #000;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    text-decoration: none;
+    font-weight: 700;
 }
