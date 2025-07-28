@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    font-family: "Winky Rough", sans-serif;
+    user-select: none;
+    color: aliceblue;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -5,9 +13,73 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: #001;
+    background: url(https://www.toptal.com/designers/subtlepatterns/uploads/darkness.png);
+    animation: waterfall 10s linear infinite;
+    will-change: background-position;
+}
+
+@keyframes waterfall {
+    from {
+        background-position: center 0;
+    }
+
+    to {
+        background-position: center 400px;
+    }
 }
 
 h1 {
-    font-family: 'Comic Sans MS';
     font-size: 35px;
+    margin-bottom: 0.5em;
+    text-shadow: 3px 3px 4px gray;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 0.2em;
+    text-shadow: 3px 3px 4px gray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    justify-content: left;
+}
+
+#bumpy-div {
+    height: 60vh;
+    width: 80vw;
+}
+
+#buttons {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.shuffle-button,
+.patreon-button {
+    border: 2px solid black;
+    font-size: 1.5em;
+    color: #000;
+    box-shadow: 2px 2px 5px black;
+}
+
+.shuffle-button {
+    background-color: lightcoral;
+}
+
+.patreon-button {
+    background-color: lightgreen;
 }
