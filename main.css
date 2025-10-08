@@ -29,6 +29,29 @@ i {
     font-style: italic;
 }
 
+.back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    background: #f2f2f2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.back-arrow:hover {
+    background: #ddd;
+    transform: scale(1.1);
+}
+
 @keyframes waterfall {
     from {
         background-position: center 0;
@@ -159,7 +182,7 @@ main {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 #panel-title {
@@ -177,7 +200,74 @@ main {
     color: #000;
     padding: 0.6rem 0.8rem;
     border-radius: 4px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     font-weight: 700;
+}
+
+#index-big-div {
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+
+#index-big-div>a {
+    text-decoration: none;
+}
+
+.index-card {
+    transition: transform 0.3s ease;
+    min-width: 15vw;
+    max-width: 15vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: transparent;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.index-card>* {
+    cursor: pointer;
+}
+
+@keyframes rainbow-shift {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 400% 0%;
+    }
+}
+
+
+.index-card:hover {
+    transition: transform 1s ease;
+    background: repeating-linear-gradient(90deg,
+            rgba(255, 0, 0, 0.5) 0%,
+            rgba(255, 165, 0, 0.5) 14.2%,
+            rgba(255, 255, 0, 0.5) 28.4%,
+            rgba(0, 255, 0, 0.5) 42.6%,
+            rgba(0, 255, 255, 0.5) 56.8%,
+            rgba(0, 0, 255, 0.5) 71%,
+            rgba(238, 130, 238, 0.5) 85.2%,
+            rgba(255, 0, 0, 0.5) 100%);
+    background-size: 400% 100%;
+    background-repeat: repeat-x;
+    transform: scale(1.05);
+    animation: rainbow-shift 15s linear infinite;
+}
+
+.index-card-icon {
+    font-size: 10em;
+}
+
+.index-card-title {
+    font-size: 2em;
 }

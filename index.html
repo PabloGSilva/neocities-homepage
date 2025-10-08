@@ -8,41 +8,57 @@
     <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/matter-wrap/build/matter-wrap.min.js"></script>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <main>
         <div id="header-text">
-            <h1>Pablo Silva's Jukebox</h1>
-            <p>Hey! My name is Pablo Silva and, along with coding for a living, i make music in my spare time. At this
-                point
-                my musical catalogue is so cluttered that i felt the need to create this hub to serve as an introduction
-                to
-                my art works. You know, i like to create and i like to give myself a challenge, so none of these albums
-                sound alike at all. Feel free to click on one of them to see a brief description and see what it has
-                going
-                on!</p>
+            <h1>Pablo Silva</h1>
+            <p>Hey! My name is Pablo Silva and, along with coding for a living, i make music in my spare time. I would
+                say that i have invented music, but that would sound pretentious, so i won't say that despite it being
+                true.</p>
         </div>
         <div id="buttons">
-            <button onclick="shuffleStack(0.7)" class="shuffle-button">Shuffle!</button>
             <a href="https://ko-fi.com/2canwin"><button class="patreon-button">☕ Buy me a coffee :)</button></a>
         </div>
-        <div id="bumpy-div"></div>
+        <div id="index-big-div">
+            <a href="./jukebox.html">
+                <div class="index-card">
+                    <label class="index-card-icon">💽</label>
+                    <label class="index-card-title">Jukebox</label>
+                    <label class="index-card-subtitle">Browse my musical<br>collection!</label>
+                </div>
+            </a>
+            <a href="./bio.html">
+                <div class="index-card">
+                    <label class="index-card-icon">📋</label>
+                    <label class="index-card-title">Bio</label>
+                    <label class="index-card-subtitle">Find out who<br>Pablo is</label>
+                </div>
+            </a>
+            <a href="./contact.html">
+                <div class="index-card">
+                    <label class="index-card-icon">📢</label>
+                    <label class="index-card-title">Contact</label>
+                    <label class="index-card-subtitle">Talk to me!</label>
+                </div>
+            </a>
+        </div>
 
         <div id="backdrop" aria-hidden="true"></div>
-        <aside id="album-panel" aria-hidden="true">
-            <button id="panel-close" aria-label="Close panel">✕</button>
-            <div class="panel-content">
-                <img id="panel-cover" alt="Album cover" />
-                <h2 id="panel-title"></h2>
-                <p id="panel-genres"></p>
-                <a id="panel-link" href="#" target="_blank" rel="noopener noreferrer">Open on Bandcamp</a>
-                <p id="panel-description"></p>
-            </div>
-        </aside>
+
+        <div id="sfck1tq774yfwhcytjd98eyylsceqk413yn"></div>
+        <script type="text/javascript"
+            src="https://counter1.optistats.ovh/private/counter.js?c=k1tq774yfwhcytjd98eyylsceqk413yn&down=async"
+            async></script><br><a style="text-decoration: none;" href="https://www.freecounterstat.com">Website
+            hits</a><noscript><a href="https://www.freecounterstat.com" title="free website hit counter"><img
+                    src="https://counter1.optistats.ovh/private/freecounterstat.php?c=k1tq774yfwhcytjd98eyylsceqk413yn"
+                    border="0" title="free website hit counter" alt="free website hit counter"></a></noscript>
     </main>
 </body>
-<script src="index.js"></script>
+<script>
+    setTimeout(() =>  document.body.classList.add("fade-in"), 200);
+</script>
 
 </html>

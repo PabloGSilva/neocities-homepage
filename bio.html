@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Silva's Music</title>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matter-wrap/build/matter-wrap.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <main>
+        <div id="header-text" style="gap: 0.5em;">
+            <h1>Who the hell is Pablo Silva?</h1>
+            <p>I'm your local internet musician. I'd guess the main quirk that makes me stick out as an artist is the
+                sheer range of musical styles i embark on. What else could you expect from a Ween fan?</p>
+            <p>Feel free to check out my "jukebox" page and explore the records i have released so far.</p>
+            <br>
+            <h1>Cool slogans... but who actually are you?</h1>
+            <p>Well, my name is <i>Pablo A. G. Silva Jr.</i>, and i am a <label id="ageLabel">[Loading
+                    age...]</label> year old <label style="font-size: 0.5em;"><i>[July 1st 2004]</i></label> latino
+                chico from São Paulo -
+                Brazil. That only really on paper, really, since i moved to the
+                city of Garça when i was about 4 years old. Well, i currently work as a software developer and I have a
+                degree in systems development from the FATEC Technology College in Garça.
+            </p>
+            <p>I have developed a passion for music over the years, which sparkled off my step-father introducing me to
+                Pink Floyd's <i>"Comfortably Numb"</i>. Safe to say that my mind was blown at that moment, and music
+                never felt more intense before. Eventually i got into all the cool classic rock bands, y'know, The
+                Beatles, The Doors, Zeppelin, etc. Since then my musical taste has morphed into a hybrid between the
+                frantic extreme punk of Orchid's <i>"I Am Nietzsche"</i> to the beautiful aquatic soundscapes of Hiroshi
+                Yoshimura's <i>"Wet Land"</i>, with some Chappell Roan thrown in the rotation too. So yeah i am an
+                autistic little brat about anything music, even the least musical sounding records you can find.</p>
+            <p>I'm also an enthusiast of topics like tech development, history, politics, cinema, gaming...</p>
+            <p>Trust me, when the socialist revolution starts i'll be there on the front lines hehehe.</p>
+        </div>
+
+        <div id="backdrop" aria-hidden="true"></div>
+        <a href="index.html" class="back-arrow" title="Go back">
+            ←
+        </a>
+    </main>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        document.body.classList.add("fade-in");
+    });
+
+    function calculateAge(birthDate) {
+        const today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+
+        // if birthday hasn’t happened yet this year, subtract 1
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+
+        return age;
+    }
+
+    const birthDate = new Date(2004, 6, 1);
+    const age = calculateAge(birthDate);
+
+    document.getElementById("ageLabel").textContent = `${age}`;
+
+</script>
+
+</html>
