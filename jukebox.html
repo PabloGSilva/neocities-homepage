@@ -2,46 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Silva's Music</title>
-    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/matter-wrap/build/matter-wrap.min.js"></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pablo Silva's Music</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 
 <body>
-    <main>
-        <div id="header-text" style="gap: 0.5em;">
-            <h1>Pablo Silva's Jukebox</h1>
-            <p>At this point my musical catalogue is so cluttered that i felt the need to create this hub to serve as an
-                introduction to my art works. You know, i like to create and i like to give myself a challenge, so none
-                of these albums sound alike at all.</p>
-            <p>Click on the covers for some insight on the albums!</p>
-        </div>
-        <div id="buttons">
-            <button onclick="shuffleStack(0.7)" class="shuffle-button">Shuffle!</button>
-            <a href="https://ko-fi.com/2canwin"><button class="patreon-button">☕ Buy me a coffee :)</button></a>
-        </div>
-        <div id="bumpy-div"></div>
+  <main>
+    <div id="header-text" style="gap: 0.5em;">
+      <h1>Pablo Silva's Jukebox</h1>
+      <p>At this point my musical catalogue is so cluttered that i felt the need to create this hub to serve as an
+        introduction to my art works. You know, i like to create and i like to give myself a challenge, so none
+        of these albums sound alike at all.</p>
+      <p>Click on the covers for some insight on the albums!</p>
+    </div>
 
-        <div id="backdrop" aria-hidden="true"></div>
-        <aside id="album-panel" aria-hidden="true">
-            <button id="panel-close" aria-label="Close panel">✕</button>
-            <div class="panel-content">
-                <img id="panel-cover" alt="Album cover" />
-                <h2 id="panel-title"></h2>
-                <p id="panel-genres"></p>
-                <a id="panel-link" href="#" target="_blank" rel="noopener noreferrer">Open on Bandcamp</a>
-                <p id="panel-description"></p>
-            </div>
-        </aside>
-    </main>
-    <a href="index.html" class="back-arrow" title="Go back">
-        ←
-    </a>
+    <div id="buttons">
+      <a href="https://ko-fi.com/2canwin">
+        <button class="patreon-button">☕ Buy me a coffee :)</button>
+      </a>
+    </div>
+
+    <div id="album-grid"></div>
+
+    <div id="backdrop" aria-hidden="true"></div>
+    <aside id="album-panel" aria-hidden="true">
+      <button id="panel-close" aria-label="Close panel">✕</button>
+      <div class="panel-content">
+        <img id="panel-cover" alt="Album cover" />
+        <h2 id="panel-title"></h2>
+        <p id="panel-genres"></p>
+        <a id="panel-link" href="#" target="_blank" rel="noopener noreferrer">Open on Bandcamp</a>
+        <p id="panel-description"></p>
+      </div>
+    </aside>
+  </main>
+
+  <a href="index.html" class="back-arrow" title="Go back">←</a>
+  <script src="jukebox.js"></script>
 </body>
-<script src="jukebox.js"></script>
 
 </html>

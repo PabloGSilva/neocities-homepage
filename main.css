@@ -19,6 +19,9 @@ body {
     will-change: background-position;
     opacity: 0;
     transition: opacity 1s ease-out;
+    overflow-x: hidden;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 body.fade-in {
@@ -270,4 +273,42 @@ main {
 
 .index-card-title {
     font-size: 2em;
+}
+
+#album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
+    width: 80vw;
+    margin-top: 2em;
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    padding: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+}
+
+.album-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+}
+
+.album-title {
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px gray;
 }
